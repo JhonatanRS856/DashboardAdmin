@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-primary: #7380ec;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-warning: #ffbb55;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-theme-var{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+a {
+    color: var(--color-dark);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+p {
+    color: var(--color-dark-variant);
+}
+
+b {
+    color: var(--color-dark);
+}
+
+
+
+.aside_link.active {
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    margin-left: 0;
+}
+
+.aside_link.active::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+
+.aside_link.active .material-icons-sharp {
+    margin-left: calc(1rem - 3px);
+}
+
+.aside_link:hover .material-icons-sharp {
+    transition: all 300ms ease;
+    margin-left: 1rem;
+}
+
+.card-insights {
+    box-shadow: var(--box-shadow);
+}
+
+.card-insights:hover {
+    box-shadow: none;
+}
+
+.progressDiv {
+    position: relative;
+    width: 92px;
+    border-radius: 50%;
+}
+
+.progressDiv svg {
+    width: 7rem;
+    height: 7rem;
+}
+
+.progressDiv svg circle {
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14px;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+
+.progressDiv .sales circle {
+    stroke-dasharray: 185;
+    stroke-dashoffset: 0;
+}
+
+.progressDiv .expenses circle {
+    stroke-dasharray: 130;
+    stroke-dashoffset: -50;
+}
+
+.progressDiv .income circle {
+    stroke-dasharray: 90;
+    stroke-dashoffset: -75;
+}
+
+
+
+main table {
+    box-shadow: var(--box-shadow);
+    transition: all .3s ease;
+}
+
+table:hover {
+    box-shadow: none;
+}
+
+table tbody td {
+    height: 2.8rem;
+    color: var(--color-dark-variant);
+}
+
+.theme-toggler {
+    display: flex;
+    background: var(--color-light);
+    align-items: center;
+    justify-content: space-between;
+    height: 1.6rem;
+    width: 4.2rem;
+    border-radius: var(--border-radius-1);
+    border-style: dotted;
+    
+}
+
+.theme-toggler span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.theme-toggler span.active{
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+
+#navFixed.show{
+    left: 0;
+    box-shadow: 0 0 0 100vmax rgb(0,0,0,.6);
+}
+
+.status{
+    text-transform: capitalize;
+}
+
+.status.pending{
+    color: var(--color-warning);
+}
+
+.status.declined{
+    color: var(--color-danger);
+}
+
+.status.delivered{
+    color: var(--color-primary);
+}

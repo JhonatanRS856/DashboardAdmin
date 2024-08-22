@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.img-profile{
+    @apply w-[2.8rem] h-[2.8rem] rounded-full overflow-hidden;
+}
+
+.img{
+    @apply w-full h-full object-cover duration-300 hover:scale-105 hover:rotate-6;
+}
+
+.text-muted{
+    @apply text-color-info-dark;
+}
+
+.aside_link{
+    @apply flex items-center md:w-[5.6rem] lg:w-auto gap-[1rem] ml-[2rem] text-color-info-dark relative h-[3.5rem] duration-300 hover:text-color-primary;
+}
+
+.card-insights{
+    @apply flex flex-col bg-color-white p-[var(--card-padding)] rounded-[var(--card-border-radius)] duration-300;
+}
+
+.card-number{
+    @apply absolute flex items-center justify-center w-full h-full top-[-4px] left-[-3px];
+}
+
+.update{
+    @apply flex gap-4;
+}
+
+.sales-a{
+    @apply w-full flex items-center gap-4  py-[1.2rem] px-[1.8rem] rounded-[1.2rem] shadow-[0_2rem_3rem] shadow-color-light duration-300 hover:shadow-none;
+}
